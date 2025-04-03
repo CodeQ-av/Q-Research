@@ -17,15 +17,35 @@
         .nav-border {
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        .hamburger-line {
+            transition: all 0.3s ease-in-out;
+        }
+        .hamburger.open .hamburger-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open .hamburger-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
         .card-hover:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
         }
         .text-stroke {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
             color: transparent;
         }
         .fade-in {
@@ -39,20 +59,58 @@
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation (Minimal Apple Style) -->
-    <nav class="hero-gradient nav-border fixed w-full z-50">
-        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-white text-2xl font-light">Code <span class="font-medium">Q#</span></div>
-            <div class="flex space-x-8">
-                <a href="index.html" class="text-black font-medium hover:text-gray-600 border-b-2 border-black ">Home</a>
-                <a href="about.html" class="text-black font-medium hover:text-gray-600">About</a>
-                <a href="research.html" class="text-black font-medium hover:text-gray-600">Research</a>
-                <a href="ai.html" class="text-black font-medium hover:text-gray-600">AI Models</a>
+    <nav class="bg-black nav-border fixed w-full z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo - Left Side -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="ResearchHub Logo" class="h-12 w-auto max-w-[180px] sm:max-w-[220px] md:max-w-[244px]">
+                    </a>
+                </div>
+
+                <!-- Centered Navigation - Hidden on mobile -->
+                <div class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                    <div class="flex space-x-8">
+                        <a href="index.html" class="text-white font-medium hover:text-blue-400 transition-colors duration-200 border-b-2 border-transparent hover:border-blue-400 pb-1">Home</a>
+                        <a href="about.html" class="text-gray-300 font-medium hover:text-white transition-colors duration-200">About</a>
+                        <a href="research.html" class="text-gray-300 font-medium hover:text-white transition-colors duration-200">Research</a>
+                        <a href="ai.html" class="text-gray-300 font-medium hover:text-white transition-colors duration-200">AI Models</a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Sign In Button -->
+                <div class="hidden lg:flex items-center">
+                    <button class="bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition">
+                        Sign In
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button class="hamburger focus:outline-none" id="mobile-menu-button">
+                        <div class="hamburger-line w-6 h-0.5 bg-white mb-1.5"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-white mb-1.5"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-white"></div>
+                    </button>
+                </div>
             </div>
-            <button class="bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition">
-                Sign In
-            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu lg:hidden bg-gray-900 mt-2 rounded-lg" id="mobile-menu">
+                <div class="px-2 pt-2 pb-4 space-y-2">
+                    <a href="index.html" class="block px-3 py-2 text-white font-medium rounded-md hover:bg-gray-800">Home</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-300 font-medium rounded-md hover:bg-gray-800">About</a>
+                    <a href="research.html" class="block px-3 py-2 text-gray-300 font-medium rounded-md hover:bg-gray-800">Research</a>
+                    <a href="ai.html" class="block px-3 py-2 text-gray-300 font-medium rounded-md hover:bg-gray-800">AI Models</a>
+                    <button class="w-full mt-2 bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition">
+                        Sign In
+                    </button>
+                </div>
+            </div>
         </div>
     </nav>
+
 
 
     <!-- Hero Section (Ultra Premium) -->
@@ -137,6 +195,30 @@
         </div>
     </div>
 </section>
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenuButton.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+        
+        // Toggle aria-expanded attribute
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuButton.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
     <!-- Research Impact Section -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
