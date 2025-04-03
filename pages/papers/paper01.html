@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q# | Paper Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .paper-content {
+            line-height: 1.8;
+        }
+        .paper-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+        .paper-content p {
+            margin-bottom: 1.5rem;
+            color: #374151;
+        }
+        .paper-content .abstract {
+            background-color: #f9fafb;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <!-- <nav class="container mx-auto px-6 py-4 flex justify-center">
+        <div class="flex space-x-8">
+            <a href="index.html" class="text-black font-medium hover:text-gray-600">Home</a>
+            <a href="about.html" class="text-black font-medium hover:text-gray-600">About</a>
+            <a href="D:\Mathematics\Research Paper\Q-Research\pages\research.html" class="text-black font-medium hover:text-gray-600 border-b-2 border-black">Research</a>
+            <a href="ai.html" class="text-black font-medium hover:text-gray-600">AI Models</a>
+        </div>
+    </nav> -->
+
+    <!-- Paper Detail -->
+    <section class="py-12 container mx-auto px-6 max-w-4xl">
+        <div class="mb-8">
+            <span class="text-sm font-semibold text-blue-600">Computer Science</span>
+            <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Neural Architecture Search for Efficient Models</h1>
+            
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full mr-2"></div>
+                    <span>Dr. Emily Zhang</span>
+                </div>
+                <span>•</span>
+                <span>Published: June 15, 2023</span>
+                <span>•</span>
+                <span>Last updated: July 2, 2023</span>
+            </div>
+            
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Neural Networks</span>
+                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Architecture Search</span>
+                <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Efficiency</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">AI</span>
+            </div>
+            
+            <div class="flex flex-wrap gap-3 mb-8">
+                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download PDF
+                </a>
+                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                    Cite
+                </a>
+                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                    Share
+                </a>
+            </div>
+        </div>
+        
+        <!-- Paper Content -->
+        <div class="paper-content bg-white rounded-lg">
+            <div class="abstract">
+                <h2 class="text-xl font-semibold mb-3">Abstract</h2>
+                <p>
+                    We present a novel approach to neural architecture search (NAS) that reduces computational requirements by 40% while maintaining accuracy. 
+                    Our method combines gradient-based architecture optimization with a novel efficiency predictor that guides the search toward more computationally 
+                    efficient architectures. We evaluate our approach on multiple benchmarks, including ImageNet and CIFAR-100, demonstrating state-of-the-art results 
+                    with significantly reduced search costs. The resulting architectures achieve comparable accuracy to manually designed networks while requiring 
+                    fewer parameters and FLOPs, making them particularly suitable for edge devices and real-time applications.
+                </p>
+            </div>
+            
+            <h2>Introduction</h2>
+            <p>
+                Neural Architecture Search (NAS) has emerged as a powerful technique for automating the design of neural network architectures. 
+                While early NAS methods produced impressive results, they often required enormous computational resources, making them impractical 
+                for widespread use. Recent work has focused on making NAS more efficient, but there remains a significant gap between the computational 
+                cost of NAS and manual architecture design.
+            </p>
+            
+            <h2>Related Work</h2>
+            <p>
+                Previous approaches to efficient NAS can be broadly categorized into three groups: weight-sharing methods, performance prediction methods, 
+                and gradient-based optimization. DARTS introduced differentiable architecture search, while ProxylessNAS demonstrated the effectiveness 
+                of path-level binarization. Our work builds upon these approaches but introduces a novel efficiency predictor that directly optimizes 
+                for computational efficiency during the architecture search process.
+            </p>
+            
+            <h2>Methodology</h2>
+            <p>
+                Our method consists of three key components: (1) a differentiable architecture search space that includes both macro and micro architecture 
+                decisions, (2) an efficiency predictor that estimates the computational cost of candidate architectures, and (3) a multi-objective optimization 
+                procedure that balances accuracy and efficiency.
+            </p>
+            
+            <h2>Results</h2>
+            <p>
+                We evaluate our approach on three standard benchmarks: CIFAR-10, CIFAR-100, and ImageNet. On CIFAR-100, our method discovers architectures 
+                that achieve 96.2% accuracy with only 2.3M parameters, compared to 95.8% accuracy with 3.7M parameters for the best previous NAS method. 
+                The total search cost is reduced from 12 GPU days to 7 GPU days, a 42% reduction.
+            </p>
+            
+            <h2>Conclusion</h2>
+            <p>
+                We have presented an efficient neural architecture search method that significantly reduces computational requirements while discovering 
+                high-performance architectures. Our results suggest that direct optimization for efficiency during the search process can lead to better 
+                architectures than post-hoc pruning or quantization of architectures designed purely for accuracy. Future work will explore extending 
+                this approach to additional architecture types and hardware platforms.
+            </p>
+        </div>
+        
+        <!-- References -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6">References</h2>
+            <ol class="list-decimal pl-6 space-y-3">
+                <li class="pl-2">Zoph, B., & Le, Q. V. (2017). Neural Architecture Search with Reinforcement Learning. ICLR.</li>
+                <li class="pl-2">Liu, H., Simonyan, K., & Yang, Y. (2019). DARTS: Differentiable Architecture Search. ICLR.</li>
+                <li class="pl-2">Cai, H., Zhu, L., & Han, S. (2019). ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware. ICLR.</li>
+                <li class="pl-2">Tan, M., & Le, Q. V. (2019). EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. ICML.</li>
+            </ol>
+        </div>
+        
+        <!-- Download & Cite -->
+        <div class="mt-12 border-t border-gray-200 pt-8">
+            <h2 class="text-xl font-semibold mb-4">Download Options</h2>
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    PDF (1.2MB)
+                </button>
+                <button class="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                    </svg>
+                    LaTeX Source
+                </button>
+            </div>
+            
+            <h2 class="text-xl font-semibold mb-4">Cite This Paper</h2>
+            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                <p class="font-mono text-sm">
+                    Zhang, E. (2023). Neural Architecture Search for Efficient Models. Research Hub. https://researchhub.org/papers/nas-efficient
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <button class="flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                    BibTeX
+                </button>
+                <button class="flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    APA
+                </button>
+                <button class="flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    MLA
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Papers -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-2xl font-bold mb-8">Related Papers</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold mb-2">EfficientNet: Rethinking Model Scaling</h3>
+                    <p class="text-gray-600 text-sm mb-3">Tan & Le, 2019 - ICML</p>
+                    <p class="text-gray-700 mb-4">Systematic study of model scaling and a new scaling method that achieves better efficiency.</p>
+                    <a href="paper-detail.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Paper →</a>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold mb-2">DARTS: Differentiable Architecture Search</h3>
+                    <p class="text-gray-600 text-sm mb-3">Liu et al., 2019 - ICLR</p>
+                    <p class="text-gray-700 mb-4">Differentiable architecture search method that significantly reduces search cost.</p>
+                    <a href="paper-detail.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View Paper →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600 mb-4">© 2023 Research Hub. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-500 hover:text-gray-700">Terms</a>
+                <a href="#" class="text-gray-500 hover:text-gray-700">Privacy</a>
+                <a href="#" class="text-gray-500 hover:text-gray-700">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
